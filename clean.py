@@ -2,6 +2,9 @@ import os
 import re
 
 def clean_solution_file(filename, source="./solutions", destination="./exercises"):
+    """
+    TODO: handle clearing out the function param list too
+    """
     with open(source + "/" + filename) as file:
         text = file.read()
 
@@ -11,6 +14,7 @@ def clean_solution_file(filename, source="./solutions", destination="./exercises
 
     with open(f"{destination}/{filename}","w") as file:
         file.write(cleaned)
+
 
 files = os.listdir("./solutions")
 
