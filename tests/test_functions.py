@@ -1,4 +1,4 @@
-from exercises.functions import hello, hello_there, knock_knock
+from solutions.functions import hello, hello_there, knock_knock
 import pytest
 
 
@@ -6,7 +6,7 @@ import pytest
 def test_hello():
     actual = hello()
     expected = "Hello"
-    assert actual == expected, actual
+    assert actual == expected
 
 
 @pytest.mark.skip("comment out to run test")
@@ -29,12 +29,14 @@ def test_hello_there_prefix():
     expected = "Hello, Dr. Strange"
     assert actual == expected
 
+@pytest.mark.skip("comment out to run test")
 def test_key_word_arguments():
     actual = hello_there(prefix="Madame",subject="Futzinderdoor")
     expected = "Hello, Madame Futzinderdoor"
     assert actual == expected
 
 
+@pytest.mark.skip("comment out to run test")
 def test_knock_knock():
     actual = knock_knock(long="no panth, I'm going thwimming!",short="Panther")
 
