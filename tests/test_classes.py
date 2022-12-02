@@ -2,7 +2,7 @@ import pytest
 from exercises.classes import Dog, Mammal, Cat, Sphynx
 
 
-@pytest.mark.skip("comment out to run test")
+@pytest.mark.skip("comment out to enable test")
 def test_stray_dog():
     pooch = Dog()
     actual = pooch.name
@@ -10,7 +10,7 @@ def test_stray_dog():
     assert actual == expected
 
 
-@pytest.mark.skip("comment out to run test")
+@pytest.mark.skip("comment out to enable test")
 def test_named_dog():
     pooch = Dog("Rex")
     actual = pooch.name
@@ -18,7 +18,7 @@ def test_named_dog():
     assert actual == expected
 
 
-@pytest.mark.skip("comment out to run test")
+@pytest.mark.skip("comment out to enable test")
 def test_dog_is_mammal():
     pooch = Dog("Rex")
     actual = isinstance(pooch, Mammal)
@@ -26,7 +26,7 @@ def test_dog_is_mammal():
     assert actual == expected
 
 
-@pytest.mark.skip("comment out to run test")
+@pytest.mark.skip("comment out to enable test")
 def test_dog_has_hair():
     pooch = Dog("Rex")
     actual = pooch.has_hair
@@ -34,7 +34,7 @@ def test_dog_has_hair():
     assert actual == expected
 
 
-@pytest.mark.skip("comment out to run test")
+@pytest.mark.skip("comment out to enable test")
 def test_hairless_sphynx():
     kitty = Sphynx()
     actual = kitty.has_hair
