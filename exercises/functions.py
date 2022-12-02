@@ -11,7 +11,7 @@ def hello():
 
 
 
-def hello_there(subject="stranger",prefix=""):
+def hello_there():
     """
     Tests: 
       - test_hello_there_positional_argument
@@ -22,7 +22,7 @@ def hello_there(subject="stranger",prefix=""):
     """
     pass
 
-def knock_knock(short, long):
+def knock_knock():
     """
     Tests:
       - test_knock_knock

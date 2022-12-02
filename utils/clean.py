@@ -3,7 +3,9 @@ import re
 
 def clean_solution_file(filename, source="./solutions", destination="./exercises"):
     """
-    TODO: handle clearing out the function param list too
+    Generates exercise files from source solution files
+    - Replaces solution code with "pass"
+    - replaces function parameter list with ()
     """
     with open(source + "/" + filename) as file:
         text = file.read()
@@ -12,8 +14,26 @@ def clean_solution_file(filename, source="./solutions", destination="./exercises
 
     cleaned = re.sub(pattern, "pass", text)
 
+    trimmed = remove_params(cleaned)
+
     with open(f"{destination}/{filename}","w") as file:
-        file.write(cleaned)
+        file.write(trimmed)
+    
+
+
+
+def remove_params(test_str):
+    regex = r"(^def .*)\(.*\):"
+
+    # test_str = r"def hello_there(subject=\"stranger\",prefix=\"\"):"
+
+    subst = r"\1():"
+
+    # You can manually specify the number of replacements by changing the 4th argument
+    result = re.sub(regex, subst, test_str, 0, re.MULTILINE)
+
+    return result
+
 
 
 files = os.listdir("./solutions")
