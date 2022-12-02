@@ -1,7 +1,7 @@
 import os
 import re
 
-def clean_solution_file(filename, source="./solutions", destination="./exercises"):
+def generate_exercise(filename, source="./solutions", destination="./exercises"):
     """
     Generates exercise files from source solution files
     - Replaces solution code with "pass"
@@ -36,9 +36,10 @@ def remove_params(test_str):
 
 
 
-files = os.listdir("./solutions")
+if __name__ == "__main__":
+    files = os.listdir("./solutions")
 
-scripts = [file for file in files if file.endswith(".py")]
+    scripts = [file for file in files if file.endswith(".py")]
 
-for script in scripts:
-    clean_solution_file(script)
+    for script in scripts:
+        generate_exercise(script)
