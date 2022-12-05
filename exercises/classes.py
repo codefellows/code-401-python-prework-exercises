@@ -12,5 +12,4 @@ class Sphynx(Cat):
 
 class Dog(Mammal):
 
-    def __init__(self, name="unknown"):
-        pass
+    pass

@@ -16,7 +16,9 @@ def generate_exercise(filename, source="./solutions", destination="./exercises")
 
     trimmed = remove_params(cleaned)
 
-    with open(f"{destination}/{filename}","w") as file:
+    dest_filename = filename.split("_")[1]
+
+    with open(f"{destination}/{dest_filename}","w") as file:
         file.write(trimmed)
     
 
@@ -25,11 +27,8 @@ def generate_exercise(filename, source="./solutions", destination="./exercises")
 def remove_params(test_str):
     regex = r"(^def .*)\(.*\):"
 
-    # test_str = r"def hello_there(subject=\"stranger\",prefix=\"\"):"
-
     subst = r"\1():"
 
-    # You can manually specify the number of replacements by changing the 4th argument
     result = re.sub(regex, subst, test_str, 0, re.MULTILINE)
 
     return result

@@ -16,7 +16,8 @@ class Sphynx(Cat):
 
 class Dog(Mammal):
 
+    ### solution:start
     def __init__(self, name="unknown"):
-        ### solution:start
         self.name = name
-        ### solution:end
+    
+    ### solution:end
