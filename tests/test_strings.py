@@ -1,4 +1,4 @@
-from exercise.strings import string_to_int_under_thousand_check
+from exercises.strings import string_to_int_under_thousand_check
 
 def test_upper_case():
     pass
