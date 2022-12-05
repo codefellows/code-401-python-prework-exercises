@@ -1,4 +1,4 @@
-from solutions.solution_functions import hello, hello_there, knock_knock
+from exercises.functions import hello, hello_there, knock_knock
 import pytest
 
 

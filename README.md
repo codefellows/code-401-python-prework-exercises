@@ -6,7 +6,7 @@
 - Run supplied tests by clicking `Run` button at top of screen.
 - Notice that tests have run but are all `skipped`.
 - Open `tests/test_functions.py`
-- Comment out line above `hello_test` function
+- Comment out line above `test_hello` function
   - To comment out a line add `#` to beginning of line
   - E.g. `# @pytest.mark.skip("comment out to enable test")`
 - Click `Run` button again.
